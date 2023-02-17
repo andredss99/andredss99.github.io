@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Roboto:wght@400;500;700&family=Lato:wght@300;400;700&display=swap');
+
+@keyframes cursor {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes scroll-icon {
+    100% {
+        transform: translateY(0.5rem);
+    }
+}
+
+@keyframes speech-balloon-appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(12px);
+        opacity: 1;
+    }
+}
+
+:root {
+    --bg-color: #F5F5F5;
+    --gradient-primary-color: #78E4FF;
+    --gradient-secondary-color: #FF48FA;
+    --text-color: #211F1D;
+
+    /* CORES INICIAIS
+    --bg-color: #211F1D;
+    --gradient-primary-color: #E94B3C;
+    --gradient-secondary-color: #290C9D; */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--text-color);
+}
+
+body {
+    background-color: var(--bg-color);
+    background-color: var(--bg-color);
+    font-family: 'Lato', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 980px) {
+    .container {
+        padding-inline: 1rem;
+    }
+}
+
+section:not(:first-of-type) {
+    margin-top: 25vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    text-align: center;
+    line-height: 2rem;
+}
+
+.blur {
+    width: 1064px;
+    height: 659px;
+    background-color: var(--gradient-primary-color);
+    border-radius: 50%;
+    position: absolute;
+    top: -75%;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: blur(280px);
+    z-index: -1;
+}
+
+header {
+    padding: 3.5rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14rem;
+}
+
+nav a {
+    font-family: 'Raleway', 'sans-serif';
+    font-weight: 600;
+}
+
+nav a::after {
+    content: '';
+    transform: scaleX(0);
+    height: 2px;
+    margin-top: 0.5rem;
+    background-color: var(--gradient-primary-color);
+    opacity: 0.75;
+    display: block;
+    transition: all 0.3s cubic-bezier(.11,.69,.78,.88);
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+
+    font-family: 'Raleway', 'sans-serif';
+}
+
+h1, h3 {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 3.125rem;
+    font-weight: 600;
+}
+
+h4 {
+    font-family: 'Raleway';
+    font-size: 1rem;
+}
+
+.title {
+    margin-top: 3em;
+}
+
+.title h3, .cursor {
+    font-size: 3.125rem;
+    font-weight: 600;
+    text-align: right;
+    background: linear-gradient(var(--gradient-primary-color) 13.25%, var(--gradient-secondary-color) 178%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cursor {
+    animation: cursor 1250ms infinite;
+    animation-timing-function: steps(1, end);
+}
+
+.social-icon {
+    width: 2rem;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10vh;
+    padding-inline: 30%;
+}
+
+.scroll-button {
+    position: relative;
+    display: block;
+    margin: 20vh auto;
+    transform: translateY(0);
+
+    animation: scroll-icon 1000ms ease-in-out infinite alternate;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.about-me {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-me p {
+    text-align: justify;
+    width: 60ch;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.skill-item {
+    width: 116px;
+    height: 116px;
+    border-radius: 24px;
+    background: linear-gradient(130deg, var(--gradient-primary-color) 10%, var(--gradient-secondary-color) 150%);
+    box-sizing: border-box;
+    padding: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.skill-item img {
+    max-width: 4rem;
+    width: 100%;
+}
+
+.projects-row {
+    margin-top: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 12em;
+}
+
+.projects-row img {
+    width: 100%;
+    height: 434px;
+    object-fit: cover;
+    object-position: top;
+    filter: grayscale(1);
+
+    transition: 0.5s;
+}
+
+.projects-row img:hover {
+    filter: grayscale(0);
+}
+
+.projects-row .project-placeholder {
+    max-width: 380px;
+    max-height: 380px;
+    width: 100%;
+    height: 100%;
+    background-color: #a763ff;
+    filter: grayscale(0);
+
+    transition: filter 0.5s;
+}
+
+.projects-row .project-placeholder:hover {
+    filter: grayscale(1);
+}
+
+.project-item {
+    width: 100%;
+    height: 534px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.project-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.project-description h4 {
+    font-weight: 600;
+    text-align: center;
+}
+
+.project-description .project-link-icon {
+    /* width: 1.5em;
+    height: 1.5em;
+    display: block; */
+}
+
+.articles-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.articles {
+    display: flex;
+    align-items: center;
+    margin-top: 2em;
+    gap: 10em;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article p {
+    text-align: justify;
+}
+
+.article-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: -webkit-linear-gradient(var(--gradient-primary-color) 14%, rgba(41, 12, 157, 0.75) 165%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.8;
+    max-width: 16em;
+    text-align: center;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-info {
+    position: relative;
+}
+
+button {
+    font-family: 'Raleway', sans-serif;
+    border-radius: 100rem;
+    font-size: 1rem;
+    height: 50px;
+    width: 300px;
+    box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+    border: solid 2px transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(var(--gradient-primary-color) 13.25%, var(--gradient-secondary-color) 178%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px var(--bg-color) inset;
+
+    transition: 0.5s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:focus-visible {
+    outline: none;
+}
+
+.clipboard-info-text-container {
+    height: 64px;
+    display: flex;
+    justify-content: center;
+}
+
+.clipboard-info-text {
+    width: 232px;
+    transform: translateY(36px);
+    display: none;
+}
+
+.speech-balloon {
+    background-color: white;
+    border-radius: 6px;
+    border: 1px solid var(--text-color);
+    position: relative;
+    width: 100%;
+}
+
+.speech-balloon p {
+    font-size: 12px;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid var(--text-color);
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-block: 2rem;
+    margin-top: 2rem;
+    background-color: var(--text-color);
+}
+
+footer * {
+    color: var(--bg-color);
+}
+
+.heart-icon {
+    display: inline-block;
+    background-image: url("./assets/icons/coracao.svg");
+    background-size: contain;
+    width: 1rem;
+    height: 1rem;
+}
+
+.footer-content {
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-content a {
+    color: white;
+}
+
+.swiper {
+    height: 200px;
+    margin-top: 3rem;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1em;
+}
+
+.swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--text-color);
+    background: rgba(0, 0, 0, 0);
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--text-color);
+}
+
+/*
+
+Quebras:
+
+960px -> .container padding: 16px
+
+768px -> três items por vez no slider
+
+*/
