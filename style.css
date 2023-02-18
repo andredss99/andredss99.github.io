@@ -57,6 +57,20 @@ body {
     scroll-behavior: smooth;
 }
 
+body::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: var(--text-color);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--bg-color);
+    border: 1px solid var(--text-color);
+    border-radius: 1rem;
+}
+
 .container {
     max-width: 960px;
     width: 100%;
