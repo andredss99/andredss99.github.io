@@ -96,19 +96,6 @@ p {
     line-height: 2rem;
 }
 
-.blur {
-    width: 1064px;
-    height: 659px;
-    background-color: var(--gradient-primary-color);
-    border-radius: 50%;
-    position: absolute;
-    top: -75%;
-    left: 50%;
-    transform: translateX(-50%);
-    filter: blur(280px);
-    z-index: -1;
-}
-
 .hamburger-menu {
     display: none;
     width: 2.5rem;
@@ -551,7 +538,10 @@ footer * {
         left: 50%;
         transform: translate(-50%, -100%);
         width: 100%;
-        background-color: var(--bg-color);
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        background-color: rgba(120, 228, 255, 0.3);
+        backdrop-filter: blur(10px);
 
         transition: 1s ease;
     }
@@ -567,5 +557,15 @@ footer * {
 
     .hamburger-menu {
         display: block;
+    }
+}
+
+@media screen and (max-height: 640px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .title {
+        gap: 4rem;
     }
 }
