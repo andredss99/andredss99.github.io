@@ -1,17 +1,20 @@
-/* let dynamicSlidesPerView = 5;
-
-const mediaQuery = window.matchMedia("(max-width: 960px)");
-
-if (mediaQuery.matches) {
-    dynamicSlidesPerView = 3;
-} */
-
 var swiper = new Swiper(".swiper", {
     slidesPerView: 5,
     pagination: {
         el: ".swiper-pagination",
         clickable: true
     },
+    breakpoints: {
+        300: {
+            slidesPerView: 1
+        },
+        420: {
+            slidesPerView: 3
+        },
+        740: {
+            slidesPerView: 5
+        }
+    }
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
