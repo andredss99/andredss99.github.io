@@ -109,6 +109,19 @@ p {
     z-index: -1;
 }
 
+.hamburger-menu {
+    display: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-image: url('./assets/icons/menu_open.svg');
+    background-size: contain;
+    cursor: pointer;
+    z-index: 999;
+}
+
 header {
     padding: 3.5rem 0;
 }
@@ -471,12 +484,88 @@ footer * {
     background: var(--text-color);
 }
 
-/*
 
-Quebras:
+@media screen and (max-width: 768px) {
+    .title {
+        flex-direction: column;
+    }
 
-960px -> .container padding: 16px
+    .title h1, .title h3 {
+        text-align: center;
+    }
 
-768px -> três items por vez no slider
+    section:not(:first-of-type) {
+        margin-top: 15vh;
+    }
+}
 
-*/
+@media screen and (max-width: 600px) {
+    .articles {
+        flex-direction: column;
+        gap: 2em
+    }
+
+    .project-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-links {
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .socials {
+        padding-inline: 0;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    button {
+        max-width: 300px;
+        width: 100%;
+    }
+
+    .project-screenshot {
+        max-width: 100%;
+    }
+
+    .title h3 {
+        font-size: 2.5rem;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    section:first-of-type {
+        margin-top: 15vh;
+    }
+
+    header {
+        padding: 2rem 0;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        width: 100%;
+        background-color: var(--bg-color);
+
+        transition: 1s ease;
+    }
+
+    header.menu-show {
+        transform: translate(-50%, 0);
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+}
