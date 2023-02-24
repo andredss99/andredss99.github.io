@@ -79,8 +79,15 @@ body::-webkit-scrollbar-thumb {
 
 @media screen and (max-width: 980px) {
     .container {
-        padding-inline: 1rem;
+        padding-inline: 2rem;
     }
+}
+
+section.home {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 section:not(:first-of-type) {
@@ -148,6 +155,12 @@ nav a:hover::after {
     font-family: 'Raleway', 'sans-serif';
 }
 
+.title .title-highlight {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    padding-inline: 1rem;
+}
+
 h1, h3 {
     font-family: 'Raleway', sans-serif;
 }
@@ -165,10 +178,6 @@ h3 {
 h4 {
     font-family: 'Raleway';
     font-size: 1rem;
-}
-
-.title {
-    margin-top: 3em;
 }
 
 .title h3, .cursor {
@@ -471,6 +480,13 @@ footer * {
     background: var(--text-color);
 }
 
+@media screen and (max-width: 1024px) {
+    nav {
+        justify-content: center;
+        gap: 3rem;
+    }
+}
+
 
 @media screen and (max-width: 768px) {
     .title {
@@ -509,28 +525,7 @@ footer * {
     }
 }
 
-@media screen and (max-width: 380px) {
-    button {
-        max-width: 300px;
-        width: 100%;
-    }
-
-    .project-screenshot {
-        max-width: 100%;
-    }
-
-    .title h3 {
-        font-size: 2.5rem;
-    }
-
-    h1 {
-        font-size: 4rem;
-    }
-
-    section:first-of-type {
-        margin-top: 15vh;
-    }
-
+@media screen and (max-width: 450px) {
     header {
         padding: 2rem 0;
         position: absolute;
@@ -557,6 +552,29 @@ footer * {
 
     .hamburger-menu {
         display: block;
+    }
+
+    section:first-of-type {
+        margin-top: 15vh;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    button {
+        max-width: 300px;
+        width: 100%;
+    }
+
+    .project-screenshot {
+        max-width: 100%;
+    }
+
+    .title h3 {
+        font-size: 2.5rem;
+    }
+
+    h1 {
+        font-size: 4rem;
     }
 }
 
