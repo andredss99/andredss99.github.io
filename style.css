@@ -286,10 +286,29 @@ h4 {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    gap: 1.25rem
 }
 
 .project-description p {
     text-align: justify;
+}
+
+.tags-container {
+    width: 100%;
+}
+
+.tags-container ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+}
+
+.tags-container ul li {
+    font-size: smaller;
+    border: 1px solid var(--text-color);
+    border-radius: 4px;
+    padding-inline: 1rem;
 }
 
 .project-links {
@@ -314,7 +333,9 @@ h4 {
 
 .project-screenshot {
     max-width: 300px;
+    height: auto;
     border-radius: 8px;
+    object-fit: cover;
 }
 
 .articles-section {
