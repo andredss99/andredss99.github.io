@@ -308,7 +308,8 @@ h4 {
     font-size: smaller;
     border: 1px solid var(--text-color);
     border-radius: 4px;
-    padding-inline: 1rem;
+    padding: 0.25rem 1rem;
+    cursor: default;
 }
 
 .project-links {
