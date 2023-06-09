@@ -60,13 +60,13 @@
 
                 <div class="about-me-text">
                     <p>
-                        Muito prazer! Me chamo André, tenho 23 anos e estou no último ano de <strong>Ciências da Computação</strong>. Tenho dois anos de experiência como desenvolvedor web em estágios e projetos pessoais, sendo o <strong>PHP</strong> minha principal linguagem de programação. Com isso, pude expandir meu conhecimento para outras ferramentas como o <strong>Laravel</strong> e o <strong>Wordpress</strong>, criando aplicações web inteiras do zero.
+                        Muito prazer! Me chamo André, tenho 23 anos e estou no último ano de <strong>Ciências da Computação</strong> e, no momento, estou buscando uma posição como desenvolvedor júnior. Tenho dois anos de experiência como desenvolvedor web em estágios e projetos pessoais, sendo o <strong>PHP</strong> minha principal linguagem de programação.
                     </p>
                     <p>
-                        Atualmente, estou focando em aprimorar minhas habilidades no back-end, pois <strong>eu valorizo meu código</strong>, e acredito que uma codificação bem escrita é um exercício de empatia, não só comigo mesmo, mas com outras pessoas que possam vir a ler meu código futuramente.
+                        Atualmente, estou focando em aprimorar minhas habilidades no back-end, estudando <strong>TDD</strong>, <strong>padrão MVC</strong>, <strong>Laravel</strong> e demais conceitos de boas práticas.
                     </p>
                     <p>
-                        Também estou estudando tecnologias para desenvolvimento front-end, como <strong>React</strong>, para que eu possa aumentar meu leque de habilidades e atender melhor às suas necessidades e/ou da sua empresa!
+                        Também estou estudando tecnologias para desenvolvimento front-end, como <strong>React</strong>, para que eu possa aumentar meu leque de habilidades e atender melhor às suas necessidades e/ou da sua empresa.
                     </p>
                 </div>
             </section>
@@ -77,6 +77,27 @@
                 <div class="carousel-container">
                     <div class="swiper">
                         <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="skill-item">
+                                    <img src="./assets/icons/php.svg" alt="">
+                                </div>
+                                <p>PHP</p>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="skill-item">
+                                    <img src="./assets/icons/mysql.svg" alt="">
+                                </div>
+                                <p>MYSQL</p>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="skill-item">
+                                    <img src="./assets/icons/laravel.svg" alt="">
+                                </div>
+                                <p>LARAVEL</p>
+                            </div>
+
                             <div class="swiper-slide">
                                 <div class="skill-item">
                                     <img src="./assets/icons/html5.svg" alt="">
@@ -100,23 +121,9 @@
 
                             <div class="swiper-slide">
                                 <div class="skill-item">
-                                    <img src="./assets/icons/php.svg" alt="">
-                                </div>
-                                <p>PHP</p>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="skill-item">
                                     <img src="./assets/icons/wordpress.svg" alt="">
                                 </div>
                                 <p>WORDPRESS</p>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="skill-item">
-                                    <img src="./assets/icons/laravel.svg" alt="">
-                                </div>
-                                <p>LARAVEL</p>
                             </div>
 
                             <div class="swiper-slide">
@@ -126,12 +133,6 @@
                                 <p>MONGODB</p>
                             </div>
 
-                            <div class="swiper-slide">
-                                <div class="skill-item">
-                                    <img src="./assets/icons/mysql.svg" alt="">
-                                </div>
-                                <p>MYSQL</p>
-                            </div>
                         </div>
                         <div class="swiper-pagination"></div>
                     </div>
@@ -200,11 +201,16 @@
                     <div class="article">
                         <a href="#">
                             <h3 class="article-title">
-                                [BACK-END] API em PHP com SOLID e testes unitários
+                                [PHP] - Desafio Alura - 7 Days of Code - Dia 1
                             </h3>
                         </a>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas asperiores, aliquam consectetur sequi cumque assumenda possimus incidunt sunt suscipit unde aliquid magni corrupti? Corporis veniam sunt quaerat optio? Qui, delectus.
+                            Nesta série de posts (em andamento), eu mostro meu processo para a resolução das tarefas diárias do desafio 7 Days of Code de PHP, da Alura.
+                        </p>
+                        <p>
+                            <a href="https://dev.to/andredss99/php-desafio-alura-7-days-of-code-dia-1-4mo4" target="_blank">
+                                <strong>[+] Ver mais</strong>
+                            </a>
                         </p>
                     </div>
                 </div>
@@ -214,7 +220,23 @@
                 <h3 class="subtitle align-left">contato</h3>
                 <h2>vamos bater um papo :)</h2>
 
-                <div class="contact-info">
+                <form action="https://formkeep.com/f/7ee2bf869bb1" method="post">
+                    <label for="nome" class="required">Nome</label>
+                    <input type="text" name="nome" id="nome" required>
+
+                    <label for="email" class="required">Email</label>
+                    <input type="email" name="email" id="email" required>
+
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" name="telefone" id="telefone">
+
+                    <label for="mensagem" class="required">Mensagem</label>
+                    <textarea name="mensagem" id="mensagem" cols="30" rows="10" required></textarea>
+
+                    <input type="submit" value="Enviar">
+                </form>
+
+                <!-- <div class="contact-info">
                     <p>
                         <button onclick="copyEmailToClipboard()">Mande um <strong>email</strong>!</button>
                     </p>
@@ -226,7 +248,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </section>
         </main>
     </div>

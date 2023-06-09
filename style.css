@@ -359,7 +359,7 @@ h4 {
 }
 
 .article p {
-    text-align: justify;
+    text-align: center;
 }
 
 .article-title {
@@ -502,6 +502,58 @@ footer * {
     background: var(--text-color);
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 1rem;
+}
+
+form input {
+    height: 3rem;
+    padding-left: 0.5rem;
+}
+
+form input,
+form textarea {
+    border: 1px solid #211F1D;
+    border-radius: 2rem;
+    margin-top: 0.5rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+}
+
+form textarea {
+    padding: 1rem;
+}
+
+form input[type="submit"] {
+    padding: 0;
+    border: 1px solid var(--text-color);
+    margin-top: 1rem;
+    font-weight: 700;
+    font-size: 1rem;
+    width: 50%;
+    align-self: center;
+    height: 3rem;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: 0.2s;
+}
+
+form input[type="submit"]:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+.required::after {
+    content: '*';
+    color: #e72a3a;
+    display: inline-block;
+}
+
 @media screen and (max-width: 1024px) {
     nav {
         justify-content: center;
@@ -578,6 +630,10 @@ footer * {
 
     section:first-of-type {
         margin-top: 15vh;
+    }
+
+    form input[type="submit"] {
+        width: 100%;
     }
 }
 
