@@ -279,6 +279,7 @@ h4 {
     border-radius: 16px;
     padding: 1rem;
     margin: 1rem auto;
+    align-items: center;
 }
 
 .project-description {
