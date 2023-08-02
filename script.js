@@ -35,6 +35,14 @@ async function copyEmailToClipboard() {
 
     clipboardInfoText.style.display = "inline-block";
     clipboardInfoText.style.animation = "speech-balloon-appear 1s normal forwards";
+
+    window.setTimeout(hideClipboardNotification, 3000);
+}
+
+function hideClipboardNotification() {
+    const clipboardInfoText = document.querySelector(".clipboard-info-text");
+
+    clipboardInfoText.style.animation = "speech-balloon-disappear 1s normal forwards";
 }
 
 function handleMenuClick(menuIcon) {
